@@ -1,0 +1,17 @@
+{% extends 'home/base.html' %}
+{% block header %}
+<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">    
+    <h1 class="fw-bolder">Inicio de sesión</h1>
+</div>
+{% endblock header %}
+{% block content %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="d-grid gap-1">
+            <button type="submit" class="btn btn-success">Iniciar sesión</button>
+        </div>
+    </form>
+
+{% endblock content %}

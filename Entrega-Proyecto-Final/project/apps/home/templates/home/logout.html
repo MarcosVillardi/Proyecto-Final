@@ -1,0 +1,10 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block header %}
+<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">    
+    <h1 class="fw-bolder">Has salido de la sesión, un saludo</h1>
+</div>
+{% endblock header %}
+{% block content %}
+        <img class="img-fluid d-block mx-auto" src="{% static 'home/img/exit.png' %}">
+{% endblock content %}

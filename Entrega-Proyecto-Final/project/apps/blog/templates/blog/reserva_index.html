@@ -1,0 +1,18 @@
+{% extends 'home/base.html' %}
+{% block header %}
+<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">    
+    <h1 class="fw-bolder">Reservas</h1>
+</div>
+{% endblock  %}
+{% block content %}
+{% if user.is_authenticated %}
+<h1 class=" d-grid"><a class="btn btn-outline-primary" href="{% url 'blog:reserva_list' %}">List</a></h1>
+{% else %}
+<h1>Necesita registrarse para hacer una reserva</h1>
+{% endif %}
+{% if user.is_staff %}
+    <h1 class=" d-grid"><a class="btn btn-outline-success" href="{% url 'blog:reserva_create' %}">Create</a></h1>
+    <h1 class=" d-grid"><a class="btn btn-outline-info" href="{% url 'blog:reserva_update' %}">Update</a></h1>
+    <h1 class=" d-grid"><a class="btn btn-outline-danger" href="{% url 'blog:reserva_delete' %}">Delete</a></h1>
+{% endif %}
+{% endblock  %}

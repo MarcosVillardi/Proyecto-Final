@@ -1,0 +1,9 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+    <h1>¿Estás seguro que quieres eliminar {{ object }} ?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-outline-danger">Eliminar</button>
+    </form>
+{% endblock %}

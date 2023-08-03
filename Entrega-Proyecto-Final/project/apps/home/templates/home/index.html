@@ -1,0 +1,38 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card mb-4">
+                <img class="card-img-top" src="{% static 'home/img/hotel.png' %}" alt="..." />
+                <div class="card-body">
+                    <h2 class="card-title">The Azure Palace</h2>
+                    <p class="card-text">Es un lujoso hotel ubicado en un entorno idílico, rodeado de exuberantes jardines y vistas panorámicas. Con su elegante arquitectura y una decoración interior de inspiración contemporánea, este hotel ofrece una experiencia de hospedaje excepcional.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card mb-4">
+                        <img class="card-img-top" src="{% static 'home/img/habitacion.jpg' %}" alt="..." />
+                        <div class="card-body">
+                            <h2 class="card-title h4">Habitaciones</h2>
+                            <p class="card-text"></p>
+                            <a class="btn btn-primary" href="{% url 'blog:reserva_index' %}">Reservar</a>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <img class="card-img-top" src="{% static 'home/img/garaje.jpg' %}" alt="..." />
+                        <div class="card-body">
+                            <h2 class="card-title h4">Garaje</h2>
+                            <a class="btn btn-primary" href="{% url 'blog:garaje_index' %}">Ver Garaje</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+    <h1>Listas de Reservas</h1>
+    {% for reserva in reservas %}
+        <ul>
+            <p class="d-grid text-bg-dark">NOMBRE:<li>{{ reserva.nombre }}</li></p>
+            <p class="d-grid text-bg-dark">APELLIDO:</p><li>{{ reserva.apellido }}</li>    
+            <p class="d-grid text-bg-dark">DNI:</p><li>{{ reserva.dni }}</li>
+            <p class="d-grid text-bg-dark">FECHA LLEGADA:</p><li>{{ reserva.fecha_llegada }}</li>
+            <p class="d-grid text-bg-dark">FECHA SALIDA:</p><li>{{ reserva.fecha_salida }}</li>
+            <p class="d-grid text-bg-dark">NUMERO DE HABITACION:</p><li>{{ reserva.numero_habitacion }}</li>
+        </ul>    
+    {% endfor %}
+
+
+{% endblock %}

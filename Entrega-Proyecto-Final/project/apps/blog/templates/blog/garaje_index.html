@@ -1,0 +1,18 @@
+{% extends 'home/base.html' %}
+{% block header %}
+<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">    
+    <h1 class="fw-bolder">Garaje</h1>
+</div>
+{% endblock  %}
+{% block content %}
+{% if user.is_authenticated %}
+<h1 class=" d-grid"><a class="btn btn-outline-primary" href="{% url 'blog:garaje_list' %}">List</a></h1>
+{% else %}
+<h1>Necesita registrarse para hacer una reserva del garaje</h1>
+{% endif %}
+{% if user.is_staff %}
+    <h1 class=" d-grid"><a class="btn btn-outline-success" href="{% url 'blog:garaje_create' %}">Create</a></h1>
+    <h1 class=" d-grid"><a class="btn btn-outline-info" href="{% url 'blog:garaje_update' %}">Update</a></h1>
+    <h1 class=" d-grid"><a class="btn btn-outline-danger" href="{% url 'blog:garaje_delete' %}">Delete</a></h1>
+{% endif %}
+{% endblock  %}

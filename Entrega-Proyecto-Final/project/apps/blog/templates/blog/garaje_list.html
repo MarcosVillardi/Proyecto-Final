@@ -1,0 +1,15 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+    <h1>Autos en el Garaje</h1>
+    {% for garaje in garajes %}
+        <ul>
+            <li>
+                {{ garaje }}
+            </li>
+        </ul>    
+            
+    {% endfor %}
+
+
+{% endblock %}

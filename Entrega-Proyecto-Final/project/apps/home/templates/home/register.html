@@ -1,0 +1,10 @@
+{% extends 'home/base.html' %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="d-grid gap-1">
+            <button type="submit" class="btn btn-info">Crear</button>
+        </div>
+    </form>
+{% endblock  %}
